@@ -5,8 +5,8 @@
         .factory('apiService', apiService);
 
     function apiService($http) {
-        let ALL_EMPLOYEES = '/employees';
-        let ADD_EMPLOYEE = '/add';
+        let ALL_EMPLOYEES = '/api/v1/employees';
+        let ADD_EMPLOYEE = '/api/v1/add';
         return {
             getAllEmployees: getAllEmployees,
             addEmployee: addEmployee
