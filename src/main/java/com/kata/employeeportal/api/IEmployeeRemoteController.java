@@ -22,7 +22,7 @@ public interface IEmployeeRemoteController {
     EmployeesDTO getAllEmployees();
 
     class API{
-        public static final String ADD_EMPLOYEE_API = "add";
-        public static final String GET_ALL_EMPLOYEES_API = "employees";
+        public static final String ADD_EMPLOYEE_API = "api/v1/add";
+        public static final String GET_ALL_EMPLOYEES_API = "api/v1/employees";
     }
 }
