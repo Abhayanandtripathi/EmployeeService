@@ -10,11 +10,11 @@ import org.mapstruct.ReportingPolicy;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.WARN)
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface EmployeeMapper {
-    @Mapping(target="dateOfBirth", source = "entity.dateOfBirth", dateFormat = "dd-MM-yyyy")
+    @Mapping(target="dateOfBirth", source = "entity.dateOfBirth", dateFormat = "dd/MM/yyyy")
     EmployeeDTO toEmployeeDTO(EmployeeEntity entity);
-    @Mapping(target="dateOfBirth", source = "dto.dateOfBirth", dateFormat = "dd-MM-yyyy")
+    @Mapping(target="dateOfBirth", source = "dto.dateOfBirth", dateFormat = "dd/MM/yyyy")
     EmployeeEntity toEmployeeEntity(EmployeeDTO dto);
     default EmployeesDTO toEmployeesDTO(List<EmployeeEntity> entities){
         return new EmployeesDTO(entities.stream().map(this::toEmployeeDTO).collect(Collectors.toList()));

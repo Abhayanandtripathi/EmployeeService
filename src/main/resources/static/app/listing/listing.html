@@ -1,0 +1,35 @@
+<div class="container" style="width: 100%">
+    <div ng-if="vm.employeeList.length!==0">
+        <div class="well-lg navbar-default">
+            <h1>Our employees</h1>
+        </div>
+        <div>
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Date Of Birth</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="employee in vm.employeeList | orderBy: 'firstName'">
+                    <td>{{employee.firstName}}</td>
+                    <td>{{employee.lastName}}</td>
+                    <td>{{employee.department}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.dateOfBirth}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div ng-if="vm.employeeList.length===0">
+        <div class="well-lg navbar-default">
+            <h1> Oops! no employees to show :(</h1>
+        </div>
+    </div>
+
+</div>
