@@ -33,6 +33,7 @@
         }
 
         function _success() {
+            vm.employee = {};
             console.log("Employee registered successfully!")
         }
 
