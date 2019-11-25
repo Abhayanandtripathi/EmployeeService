@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "json3": "~3.2.6",
-    "bootstrap": "~4.0.0",
+    "bootstrap": "~3.3.0",
     "angular-route": "~1.7.x",
     "angular-bootstrap": "^2.5.0"
   },
